@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+	--typeWriterSpeed: 4s;
+	--mainColor: #c21e56;
+
+	--textOneSteps: ;
+	--textTwoSteps: ;
+	--textThreeSteps: ;
+	--textFourSteps: ;
+	--textFiveSteps: ;
+	--textSixSteps: ;
+	--textSevenSteps: ;
+
+	--textOneDelay: 2s;
+	--textTwoDelay: 9s;
+	--textThreeDelay: 16s;
+	--textFourDelay: 23s;
+	--textFiveDelay: 30s;
+	--textSixDelay: 37s;
+	--textSevenDelay: 44s;
+}
+
+body {
+	margin: 0;
+	background-color: var(--mainColor);
+	font-family: 'Roboto Mono', monospace;
+	min-height: 100vh;
+	display: grid;
+	place-content: center;
+	text-align: center;
+}
+
+h2,
+#textOne,
+#textTwo,
+#textThree,
+#textFour,
+#textFive,
+#textSix,
+#textSeven {
+	font-size: 16px;
+	color: white;
+	position: relative;
+	text-align: left;
+	width: max-content;
+	padding: 2.5px 0 2.5px 0;
+}
+
+#textOne::before,
+#textTwo::before,
+#textThree::before,
+#textFour::before,
+#textFive::before,
+#textSix::before,
+#textSeven::before,
+#textOne::after,
+#textTwo::after,
+#textThree::after,
+#textFour::after,
+#textFive::after,
+#textSix::after,
+#textSeven::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+}
+
+#textOne::before {
+	background: var(--mainColor);
+	animation: typewriter var(--typeWriterSpeed) var(--textOneDelay) steps(var(--textOneSteps))
+		forwards;
+}
+
+#textOne::after {
+	width: 0.1em;
+	background: transparent;
+	animation: typewriter var(--typeWriterSpeed) var(--textOneDelay) steps(var(--textOneSteps))
+			forwards,
+		blink 750ms steps(var(--textOneSteps)) 9;
+}
+
+#textTwo::before {
+	background: var(--mainColor);
+	animation: typewriter var(--typeWriterSpeed) var(--textTwoDelay) steps(var(--textTwoSteps))
+		forwards;
+}
+
+#textTwo::after {
+	width: 0.1em;
+	background: transparent;
+	animation: typewriter var(--typeWriterSpeed) var(--textTwoDelay) steps(var(--textTwoSteps))
+			forwards,
+		blink 750ms steps(var(--textTwoSteps)) 7s 9;
+}
+
+#textThree::before {
+	background: var(--mainColor);
+	animation: typewriter var(--typeWriterSpeed) var(--textThreeDelay) steps(var(--textThreeSteps)) forwards;
+}
+
+#textThree::after {
+	width: 0.1em;
+	background: transparent;
+	animation: typewriter var(--typeWriterSpeed) var(--textThreeDelay) steps(var(--textThreeSteps)) forwards,
+		blink 750ms steps(var(--textThreeSteps)) 14s 9;
+}
+
+#textFour::before {
+	background: var(--mainColor);
+	animation: typewriter var(--typeWriterSpeed) var(--textFourDelay) steps(var(--textFourSteps)) forwards;
+}
+
+#textFour::after {
+	width: 0.1em;
+	background: transparent;
+	animation: typewriter var(--typeWriterSpeed) var(--textFourDelay) steps(var(--textFourSteps)) forwards,
+		blink 750ms steps(var(--textFourSteps)) 21s 9;
+}
+
+#textFive::before {
+	background: var(--mainColor);
+	animation: typewriter var(--typeWriterSpeed) var(--textFiveDelay) steps(var(--textFiveSteps)) forwards;
+}
+
+#textFive::after {
+	width: 0.1em;
+	background: transparent;
+	animation: typewriter var(--typeWriterSpeed) var(--textFiveDelay) steps(var(--textFiveSteps)) forwards,
+		blink 750ms steps(var(--textFiveSteps)) 28s 9;
+}
+
+#textSix::before {
+	background: var(--mainColor);
+	animation: typewriter var(--typeWriterSpeed) var(--textSixDelay) steps(var(--textSixSteps)) forwards;
+}
+
+#textSix::after {
+	width: 0.1em;
+	background: transparent;
+	animation: typewriter var(--typeWriterSpeed) var(--textSixDelay) steps(var(--textSixSteps)) forwards,
+		blink 750ms steps(var(--textSixSteps)) 35s 9;
+}
+
+#textSeven::before {
+	background: var(--mainColor);
+	animation: typewriter var(--typeWriterSpeed) var(--textSevenDelay) steps(var(--textSevenSteps)) forwards;
+}
+
+#textSeven::after {
+	width: 0.1em;
+	background: transparent;
+	animation: typewriter var(--typeWriterSpeed) var(--textSevenDelay) steps(var(--textSevenSteps)) forwards,
+		blink 750ms steps(var(--textSevenSteps)) 42s infinite;
+}
+
+@keyframes typewriter {
+	to {
+		left: 100%;
+	}
+}
+
+@keyframes blink {
+	to {
+		background: white;
+	}
+}
+
+@media only screen and (min-width: 576px) {
+	h2,
+	#textOne,
+	#textTwo,
+	#textThree,
+	#textFour,
+	#textFive,
+	#textSix,
+	#textSeven,
+	#textSeven {
+		font-size: 22px;
+	}
+}
+
+@media only screen and (min-width: 720px) {
+	h2,
+	#textOne,
+	#textTwo,
+	#textThree,
+	#textFour,
+	#textFive,
+	#textSix,
+	#textSeven,
+	#textSeven {
+		font-size: 26px;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	h2,
+	#textOne,
+	#textTwo,
+	#textThree,
+	#textFour,
+	#textFive,
+	#textSix,
+	#textSeven,
+	#textSeven {
+		font-size: 30px;
+	}
+} 
